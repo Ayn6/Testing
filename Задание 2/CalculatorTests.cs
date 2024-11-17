@@ -13,7 +13,6 @@ namespace TestsCalculator
             calculator = new Calc();
         }
 
-        // Тест для сложения
         [TestMethod]
         public void AdditionTest()
         {
@@ -21,7 +20,6 @@ namespace TestsCalculator
             Assert.AreEqual(8.7, result, 0.0001);
         }
 
-        // Тест для вычитания
         [TestMethod]
         public void SubtractTest()
         {
@@ -29,7 +27,6 @@ namespace TestsCalculator
             Assert.AreEqual(6.2, result, 0.0001);
         }
 
-        // Тест для умножения
         [TestMethod]
         public void MultiplyTest()
         {
@@ -37,7 +34,6 @@ namespace TestsCalculator
             Assert.AreEqual(46.5, result, 0.0001);
         }
 
-        // Тест для деления
         [TestMethod]
         public void DivideTest()
         {
@@ -45,7 +41,6 @@ namespace TestsCalculator
             Assert.AreEqual(5.0, result, 0.0001);
         }
 
-        // Тест для деления на 0
         [TestMethod]
         [ExpectedException(typeof(DivideByZeroException))]
         public void DivideByZeroTest()
@@ -53,7 +48,6 @@ namespace TestsCalculator
             calculator.Divide(10.0, 0.0);
         }
 
-        // Тест на null значения при сложении
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void AdditionWithNullValuesTest()
@@ -61,7 +55,6 @@ namespace TestsCalculator
             calculator.Addition(null, 5.5);
         }
 
-        // Тест на null значения при вычитании
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void SubtractWithNullValuesTest()
@@ -69,7 +62,6 @@ namespace TestsCalculator
             calculator.Subtract(10.0, null);
         }
 
-        // Тест на null значения при умножении
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void MultiplyWithNullValuesTest()
@@ -77,7 +69,6 @@ namespace TestsCalculator
             calculator.Multiply(null, null);
         }
 
-        // Тест на null значения при делении
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void DivideWithNullValuesTest()
