@@ -29,7 +29,7 @@ describe("template spec", () => {
 
   });
 
-  it('.as() - alias a DOM element for later use', () => {
+  it('Проверка использования alias для элемента DOM', () => {
 
     cy.visit('https://jut.su/anime/');
 
@@ -46,7 +46,7 @@ describe("template spec", () => {
 
   })
 
-  it('Получение всех ссылок на странице', () => {
+  it('Проверка наличия ссылок с классом yrw-url', () => {
 
     Cypress.Commands.add('console', {
       prevSubject: true,
@@ -73,7 +73,7 @@ describe("template spec", () => {
 
   })
 
-  it('Проверка открытия стираницы аниме', () => {
+  it('Проверка открытия страницы аниме', () => {
 
     cy.get('input[name="ystext"]').first().type('One Piece{enter}');
 
